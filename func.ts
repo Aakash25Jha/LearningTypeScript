@@ -17,3 +17,21 @@ function add2(num1: number, num2?: number) {
   console.log(add2(5));
 }
 //*NOTE-Optional Parameter always have to come after required paramter
+//Learning Interface
+
+function fullName(person: { firstName: string; lastName: string }) {
+  console.log(`${person.firstName} ${person.lastName}`);
+}
+
+let p = { firstName: "Bruce", lastName: "Wayne" };
+
+fullName(p);
+
+interface Person {
+  firstName: string;
+  lastName: string;
+}
+function newFullName(person: Person) {
+  console.log(`${person.firstName} ${person.lastName}`);
+}
+//you can also make paramater as option in Interfaces
