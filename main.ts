@@ -23,3 +23,29 @@ let n: null = null; //subtye of all other types
 let u: undefined = undefined; //subtype of all other types
 
 //Read difference between Null and Undefined
+//***********************************************************************
+//Learning Arrays
+let list1: Array<number> = [1, 2, 3];
+let list2: number[] = [1, 2, 3];
+let list3: string[] = ["aakash", "yash", "vishal"];
+
+let person1: [string, number] = ["aakash", 22]; //fixed=1 string 1 number
+//let person2:[string[],number[]]=['aakash','yash',21,22]//*not possible*\
+
+//Learning enum
+enum colour {
+  red,
+  green,
+  blue,
+}
+let c: colour = colour.red;
+
+console.log(c);
+//enum begin with value 0, but you can assign numbers to the values inside enum
+enum colour1 {
+  black = 7,
+  magenta,
+  purple,
+}
+let c1: colour1 = colour1.magenta;
+console.log(c1);
