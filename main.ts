@@ -49,3 +49,26 @@ enum colour1 {
 }
 let c1: colour1 = colour1.magenta;
 console.log(c1);
+
+let randomvalue: any;
+randomvalue = 0;
+randomvalue = null;
+randomvalue = "crazy";
+//any is a type that allow your variable to be of any type, but you can still use functions of other types that doesn't belong.
+//Use of unknown is a solution for any but then you have to type cast variable of unknown type to use fucntions.
+
+let definite: unknown = "aakash";
+//definite.toUpperCase();//Not possible
+(definite as string).toUpperCase; //type cast or "type assertion is ts"
+console.log(definite);
+//creating a function
+function hasName(obj: any): obj is { name: string } {
+  return !!obj && typeof obj === "object" && name in obj;
+}
+if (hasName(definite)) {
+  console.log(definite.name);
+}
+//multiType
+let multiType: number | boolean;
+multiType = 10;
+multiType = true;
